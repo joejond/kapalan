@@ -161,9 +161,10 @@ function gambar_kapal(datapilih){
     pos_arr = datapilih.split("|");
     jml_kapaldipilih = (pos_arr.length - 1);
     for(var n = 0; n < (pos_arr.length - 1); n++){
-        //console.log(pos_arr[n]);
+        console.log(pos_arr[n]);
         
         pos1 = pos_arr[n].split(",");
+		console.log (pos1);
         loc_arr[n] = new google.maps.LatLng(parseFloat(pos1[1]), parseFloat(pos1[2]));
         addMarker(parseInt(pos1[0]), loc_arr[n]);
         kapal_dipilih = kapal_dipilih + (pos1[0]) + ',';
@@ -211,7 +212,9 @@ function addpath(){
     //console.log(kapal_dipilih);
     var kapal_path = [];
     kapal_path = kapal_dipilih.split(",");
-    var z = peta1.getMap().getZoom();
+    
+	
+	var z = peta1.getMap().getZoom();
     var polyOptions = {
         strokeColor: '#FF0044',
         strokeOpacity: 1.0,
@@ -269,7 +272,7 @@ var selmod = Ext.create('Ext.selection.CheckboxModel',{
                 text1 = text1 + "," + item.get('id');
             });
             var text2 = text1.substr(1, text1.length);
-            //console.log(text2);
+            console.log(text2);
             
             Ext.Ajax.request({
                 url: 'get_last_pos_array.php',
@@ -309,7 +312,7 @@ var tabel_daftar_kapal = Ext.create('Ext.grid.Panel', {
 var ship_list = {
     title: "Ship List",
     split: true,
-    region: 'east',
+    region: 'west',
     width: 200,
     collapsible: true,
     layout: {
@@ -369,7 +372,7 @@ var ship_list = {
         },
         {
             xtype: 'button',
-            text : 'update',
+            text : 'Update',
             id: 'button_update',
             disabled: true,
             handler : function() {

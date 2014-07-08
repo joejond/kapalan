@@ -6,7 +6,7 @@ if (!isset($_SESSION['s_id']) &&
 	!isset($_SESSION['s_cabang']) && 
 	!isset($_SESSION['s_nama'])) 
 	{
-		echo '<script type="text/javascript"> window.parent.location ="LoginUser.php";</script>';
+		echo '<script type="text/javascript"> window.parent.location ="./../LoginUser.php";</script>';
 	}
 else {
 	$inactive = 10*60; // Set timeout period in seconds

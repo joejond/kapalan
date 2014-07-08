@@ -1,6 +1,7 @@
 <?php
 session_start();
-require_once('./../inc/cekSession.php');
+include	'./../inc/cekSession.php';
+include	'./../inc/conn_db.php';
 ?>
 
 <!DOCTYPE html>

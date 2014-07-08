@@ -10,7 +10,6 @@ $n = sizeof($id);
 $text_out = '';
 
 $query = 'SELECT name FROM ship WHERE id_ship = ' . $id . ';'; // LAT
-
 $isi_ada = mysql_query($query);
 $row = mysql_fetch_row($isi_ada);
 

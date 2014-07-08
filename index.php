@@ -1,7 +1,7 @@
 <?php
-	session_start();
-	include	'inc/cekSession.php';
-	include	'inc/conn_db.php';
+session_start();
+include	'./../inc/cekSession.php';
+include	'./../inc/conn_db.php';
 ?>
 
 
@@ -18,7 +18,7 @@
 <body >
 
 <?php
-	header("Location: res/index.php");
+	header("Location: ./res/");
 
 ?>	 
 </body>

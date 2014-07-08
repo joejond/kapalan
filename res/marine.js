@@ -84,7 +84,7 @@ Ext.onReady(function() {
 		update_tittle();
 	}, 10000);
 
-    //peta1 = Ext.getCmp('mymap'); */
+    peta1 = Ext.getCmp('mymap'); 
 
 });
 
