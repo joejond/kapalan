@@ -21,7 +21,7 @@ include	'./../inc/conn_db.php';
 		<!--ext JS-->
 		<script type="text/javascript" src="./../extjs/ext-all.js"></script>		
         
-        <!--script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?v=3&amp;sensor=false"></script-->
+        <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?v=3&amp;sensor=false"></script>
         
         <style type="text/css">
             .labels {
@@ -34,10 +34,10 @@ include	'./../inc/conn_db.php';
               white-space: nowrap;
             }
         </style>            
-        <script src="markerwithlabel.js" type="text/javascript"></script>
+        <script type="text/javascript" src="markerwithlabel.js"></script>
         <script type="text/javascript" src="tab_map.js"></script>
-        <!--script type="text/javascript" src="detail_kapal.js"></script>
-        <script type="text/javascript" src="data_hitung.js"></script-->
+        <script type="text/javascript" src="detail_kapal.js"></script>
+        <!--script type="text/javascript" src="data_hitung.js"></script-->
         <script type="text/javascript" src="marine.js"></script>
     </head>
     <body></body>

@@ -37,7 +37,7 @@ var peta = {
     mapConfOpts: ['enableScrollWheelZoom','enableDoubleClickZoom','enableDragging'],
     mapControls: ['GSmallMapControl','GMapTypeControl'],
     setCenter: {
-        lat: 4.5,
+        lat: -1.5,
         lng: 120.0
     },
     listeners:{
@@ -161,14 +161,15 @@ function gambar_kapal(datapilih){
     pos_arr = datapilih.split("|");
     jml_kapaldipilih = (pos_arr.length - 1);
     for(var n = 0; n < (pos_arr.length - 1); n++){
-        console.log(pos_arr[n]);
+        //console.log(pos_arr[n]);
         
         pos1 = pos_arr[n].split(",");
-		console.log (pos1);
+		//console.log (pos1);
         loc_arr[n] = new google.maps.LatLng(parseFloat(pos1[1]), parseFloat(pos1[2]));
         addMarker(parseInt(pos1[0]), loc_arr[n]);
         kapal_dipilih = kapal_dipilih + (pos1[0]) + ',';
-    }
+		console.log (kapal_dipilih);
+	}
     if(status_path == 1){
         addpath();
     }
@@ -209,7 +210,9 @@ function addpath(){
     
     var str_start = getyyyymmdd(tgl_start) + '000000';
     var str_stop = getyyyymmdd(tgl_stop) + '235959';
-    //console.log(kapal_dipilih);
+    console.log(str_start);
+	console.log(str_stop);
+	//console.log(kapal_dipilih);
     var kapal_path = [];
     kapal_path = kapal_dipilih.split(",");
     
@@ -272,7 +275,7 @@ var selmod = Ext.create('Ext.selection.CheckboxModel',{
                 text1 = text1 + "," + item.get('id');
             });
             var text2 = text1.substr(1, text1.length);
-            console.log(text2);
+            //console.log(text2);
             
             Ext.Ajax.request({
                 url: 'get_last_pos_array.php',

@@ -48,7 +48,7 @@ Ext.onReady(function() {
                 title: 'SHIP - DETAIL DATA', 
                 layout: 'fit',                
                 id: 'detail_tab',
-                //items: [ panel_detail ],
+                items: [ panel_detail ],
                 iconCls: 'tab-icon'
             },
             {
